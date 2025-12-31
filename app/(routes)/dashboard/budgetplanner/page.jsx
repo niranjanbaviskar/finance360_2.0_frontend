@@ -1,4 +1,9 @@
 'use client'
+
+// --- ADDED THIS LINE TO FIX VERCEL BUILD ERROR ---
+export const dynamic = 'force-dynamic'; 
+// -------------------------------------------------
+
 import React, { useState, useEffect } from 'react';
 // import Header from '../components/layout/Navbar'; // Updated import path
 // import Footer from '../components/layout/Footer'; // Updated import path
@@ -6,7 +11,6 @@ import BudgetInputForm from './components/BudgetInputForm';
 import BudgetReport from './components/BudgetReport';
 // import FeatureSection from './components/FeatureSection';
 import { generateBudgetReport, isAIModelInitialized, getAIModelName, apiKey } from '../budgetplanner/components/aiService'; // Import AI service functions
-
 
 const BudgetPlannerPage = () => {
   const [monthlyIncome, setMonthlyIncome] = useState('');
